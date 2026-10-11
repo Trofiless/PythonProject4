@@ -84,3 +84,19 @@ def test_new_product():
     assert product.price == 210000.0
 
     assert product.quantity == 8
+
+
+def test_product_str():
+
+    product = Product("Samsung", "Описание", 100.0, 5)
+
+    assert str(product) == "Samsung, 100.0 руб. Остаток: 5 шт."
+
+
+def test_product_add():
+
+    product1 = Product("Товар 1", "Описание", 100.0, 10)
+
+    product2 = Product("Товар 2", "Описание", 200.0, 2)
+
+    assert product1 + product2 == 1400.0
