@@ -57,6 +57,8 @@ class Product:
         )
 
     def __add__(self, other: "Product") -> float:
-        if not isinstance(other, Product):
-            return NotImplemented
+
+        if type(self) is not type(other):
+            raise TypeError("Можно складывать только товары одного класса")
+
         return self.price * self.quantity + other.price * other.quantity
