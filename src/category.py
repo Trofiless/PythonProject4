@@ -41,8 +41,3 @@ class Category:
         total_quantity = sum(product.quantity for product in self.__products)
 
         return f"{self.name}, количество продуктов: " f"{total_quantity} шт."
-
-
-def test_category_str(category):
-
-    assert str(category) == "Смартфоны, количество продуктов: 13 шт."

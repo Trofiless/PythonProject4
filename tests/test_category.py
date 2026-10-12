@@ -77,3 +77,8 @@ def test_category_count(products):
     Category("Телевизоры", "Описание", products)
 
     assert Category.category_count == initial_count + 1
+
+
+def test_category_str(category):
+
+    assert str(category) == "Смартфоны, количество продуктов: 13 шт."
