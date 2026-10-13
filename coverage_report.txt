@@ -3,19 +3,21 @@ platform darwin -- Python 3.14.5, pytest-9.1.1, pluggy-1.6.0
 rootdir: /Users/elenatrofimova-pavlova/PycharmProjects/PythonProject4
 configfile: pyproject.toml
 plugins: platformdirs-4.12.2, cov-7.1.0
-collected 15 items
+collected 23 items
 
-tests/test_category.py .....                                             [ 33%]
-tests/test_product.py ..........                                         [100%]
+tests/test_category.py .....                                             [ 21%]
+tests/test_product.py ..................                                 [100%]
 
 ================================ tests coverage ================================
 _______________ coverage: platform darwin, python 3.14.5-final-0 _______________
 
-Name              Stmts   Miss  Cover   Missing
------------------------------------------------
-src/__init__.py       0      0   100%
-src/category.py      22      3    86%   40-42, 47
-src/product.py       28      1    96%   61
------------------------------------------------
-TOTAL                50      4    92%
-============================== 15 passed in 0.06s ==============================
+Name                Stmts   Miss  Cover   Missing
+-------------------------------------------------
+src/__init__.py         0      0   100%
+src/category.py        24      3    88%   41-43, 48
+src/lawn_grass.py       7      0   100%
+src/product.py         28      0   100%
+src/smartphone.py       8      0   100%
+-------------------------------------------------
+TOTAL                  67      3    96%
+============================== 23 passed in 0.07s ==============================
