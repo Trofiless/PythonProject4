@@ -227,3 +227,11 @@ def test_product_can_be_added_to_category():
     category.add_product(product)
 
     assert "Товар" in category.products
+
+
+def test_product_creation_with_zero_quantity():
+    with pytest.raises(
+        ValueError,
+        match="Товар с нулевым количеством не может быть добавлен",
+    ):
+        Product("Бракованный товар", "Неверное количество", 1000.0, 0)
