@@ -82,3 +82,17 @@ def test_category_count(products):
 def test_category_str(category):
 
     assert str(category) == "Смартфоны, количество продуктов: 13 шт."
+
+
+def test_middle_price(category):
+
+    expected_price = (180000.0 + 210000.0) / 2
+
+    assert category.middle_price() == expected_price
+
+
+def test_middle_price_empty_category():
+
+    empty_category = Category("Пустая категория", "Без продуктов", [])
+
+    assert empty_category.middle_price() == 0
